@@ -1,6 +1,6 @@
 # 1. Earthly Cloud Setup
 
-Before we can get started, we have to setup a few things. This section is entirely optional if you already have installed the Earthly CLI and created and Earthly Cloud account. But it may make the workshop easier to follow along with if you read through it.
+We have to setup a couple of things before we can get started. This section is entirely optional if you already have installed the Earthly CLI, created and Earthly Cloud account, and launched an Earthly Satellite. But it may make the workshop easier to follow along with if you read through it either way.
 
 ## 1. Sign in or Sign up for [Earthly Cloud](https://cloud.earthly.dev/login).
 
@@ -37,6 +37,6 @@ In my case it prints:
 
 **Note**: If you are a member of multuple Earthly organizations you may have to pass the `--org` flag to satellite commands. For example: `earthly sat --org <your-org-name> ls`.
 
-## 3. Complete the rest of the Getting Started tutorial
+## 3. Optional - Complete the rest of the Getting Started tutorial
 
 If you are a beginner to Earthly, we highly recommend that you complete the rest of the Getting Started tutorial. If will give you a solid foundation for the rest of the workshop.

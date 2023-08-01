@@ -78,9 +78,7 @@ function App() {
       <div className="grid content-center">
         <div className="w-12/12">
           <img src="/logo.png" width="300" />
-          <h1 className="text-3xl font-bold underline">
-            Multi-language Monorepo Demo
-          </h1>
+          <h1 className="text-3xl font-bold underline">Monorepo Workshop</h1>
           <br />
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
