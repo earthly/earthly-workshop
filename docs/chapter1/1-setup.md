@@ -6,7 +6,7 @@ Before we can get started, we have to setup a few things. This section is entire
 
 Once you have authenticated, you should see a screen that looks similar this:
 
-![Earthly welcome screen](/assets/img/image.png)
+![Earthly welcome screen](/earthly-workshop/assets/img/image.png)
 
 ## 2. Complete the "Install Earthly CLI" step
 
@@ -16,7 +16,7 @@ Click on the "Install Earthly CLI" button and follow the three steps to install 
 
 Click on the "Building in the Cloud" button at the top:
 
-![Building in the cloud](/assets/img/c1-2.png)
+![Building in the cloud](/earthly-workshop/assets/img/c1-2.png)
 
 These steps will walk you through creating your own [Earthly Satellite](https://earthly.dev/earthly-satellites)!
 

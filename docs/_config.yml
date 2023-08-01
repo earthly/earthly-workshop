@@ -2,5 +2,6 @@ remote_theme: pages-themes/architect@v0.2.0
 plugins:
   - jekyll-remote-theme
 
+baseurl: /earthly-workshop
 title: Earthly Workshop
 description: Go from a beginner to an expert with Earthly at your own pace!
