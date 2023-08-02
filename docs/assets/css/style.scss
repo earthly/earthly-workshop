@@ -1,1 +1,24 @@
+---
+---
+
 @import "{{ site.theme }}";
+
+#main-content {
+  padding-left: 20px;
+}
+
+.inner {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+aside#sidebar {
+  float: left;
+  width: 200px;
+  min-height: 504px;
+  padding-right: 40px;
+  font-size: 12px;
+  line-height: 1.3;
+  background: none;
+}
