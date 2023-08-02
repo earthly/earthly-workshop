@@ -20,6 +20,10 @@ jobs:
           node-version: "18"
       - run: npm install
         working-directory: site
+      - name: Where we are
+        run: pwd
+      - name: What is in there
+        run: ls -la
       - name: Build site
         uses: limjh16/jekyll-action-ts@v2
         with:
