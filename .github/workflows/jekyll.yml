@@ -30,6 +30,7 @@ jobs:
           enable_cache: true
           jekyll_src: site
           custom_opts: "--trace"
+          jekyll_env: production
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
