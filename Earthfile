@@ -28,7 +28,7 @@ main:
 
 
 all-test:
-  # BUILD ./rust_server/+test
+  BUILD ./rust_server/+test
   BUILD ./go_server/+test
   BUILD ./python_server/+test
   BUILD ./node_server/+test
@@ -36,7 +36,7 @@ all-test:
 
 build-services:
   ARG --required tag
-  BUILD ./rust_server/+docker --tag=$tag
+  # BUILD ./rust_server/+docker --tag=$tag
   BUILD ./go_server/+docker --tag=$tag
   BUILD ./node_server/+docker --tag=$tag
   BUILD ./python_server/+docker --tag=$tag
