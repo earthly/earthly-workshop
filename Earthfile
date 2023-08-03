@@ -12,11 +12,7 @@ PROJECT earthly-sa/earthly-vs-gha
 #   BUILD +all-build --go_server_url=http://localhost:8001 --node_server_url=http://localhost:8003 --python_server_url=http://localhost:8002 --rust_server_url=http://localhost:8000 
 #   BUILD +all-docker --tag=$tag --base_url=http://localhost
 
-main-local:
-  ARG tag=local
-  BUILD +all-test
-  BUILD +build-services --tag=$tag
-  BUILD +build-frontend-local --tag=$tag
+
 
 main:
   WAIT
@@ -36,7 +32,7 @@ all-test:
 
 build-services:
   ARG --required tag
-  # BUILD ./rust_server/+docker --tag=$tag
+  BUILD ./rust_server/+docker --tag=$tag
   BUILD ./go_server/+docker --tag=$tag
   BUILD ./node_server/+docker --tag=$tag
   BUILD ./python_server/+docker --tag=$tag
