@@ -30,6 +30,7 @@ test:
 
 docker:
   ARG --required tag
+  ARG --required ns
   COPY +build/src src 
   COPY +build/wheels wheels 
   # quotes.txt needs to go into src for gunicorn to pick it up
@@ -39,5 +40,5 @@ docker:
   RUN pip install --no-index --find-links=wheels -r requirements.txt 
   EXPOSE 8002
   ENTRYPOINT ["./start.sh" ]
-  SAVE IMAGE --push ezeev/earthly-python-example:$tag
+  SAVE IMAGE --push $ns/earthly-python-example:$tag
 

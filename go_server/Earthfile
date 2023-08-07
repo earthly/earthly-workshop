@@ -21,8 +21,9 @@ build:
 
 docker:
   ARG --required tag
+  ARG --required ns 
   COPY +build/go-server . 
   COPY ../quote_generator+artifact/quotes.txt quotes.txt
   EXPOSE 8001
   ENTRYPOINT ["./go-server"]
-  SAVE IMAGE --push ezeev/earthly-go-example:$tag
+  SAVE IMAGE --push $ns/earthly-go-example:$tag

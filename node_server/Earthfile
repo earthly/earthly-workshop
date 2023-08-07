@@ -18,7 +18,8 @@ test:
 
 docker:
   ARG --required tag
+  ARG --required ns
   FROM +build 
   EXPOSE 8003 
   ENTRYPOINT ["node", "src/index.js"]
-  SAVE IMAGE --push ezeev/earthly-node-example:$tag
+  SAVE IMAGE --push $ns/earthly-node-example:$tag

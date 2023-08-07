@@ -32,10 +32,11 @@ all-test:
 
 build-services:
   ARG --required tag
-  BUILD ./rust_server/+docker --tag=$tag
-  BUILD ./go_server/+docker --tag=$tag
-  BUILD ./node_server/+docker --tag=$tag
-  BUILD ./python_server/+docker --tag=$tag
+  ARG --required ns
+  BUILD ./rust_server/+docker --tag=$tag --ns=$ns
+  BUILD ./go_server/+docker --tag=$tag -ns=$ns
+  BUILD ./node_server/+docker --tag=$tag -ns=$ns
+  BUILD ./python_server/+docker --tag=$tag -ns=$ns
 
 build-frontend-local:
   ARG --required tag

@@ -29,6 +29,7 @@ build:
 docker:
   FROM nginx:latest 
   ARG --required tag
+  ARG --required ns
   COPY +build/dist /usr/share/nginx/html/
   EXPOSE 80 
-  SAVE IMAGE --push ezeev/earthly-react-example:$tag
+  SAVE IMAGE --push $ns/earthly-react-example:$tag

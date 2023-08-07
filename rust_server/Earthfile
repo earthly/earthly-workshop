@@ -21,6 +21,7 @@ build:
 
 docker:
   ARG --required tag
+  ARG --required ns
   FROM debian:buster-slim
   COPY +build/quote_server quote_server
   # We also have to copy Rocket.toml so that Rocket binds to the correct address and port within the container.
@@ -28,4 +29,4 @@ docker:
   COPY ../quote_generator+artifact/quotes.txt quotes.txt
   EXPOSE 8000
   ENTRYPOINT ["./quote_server"]
-  SAVE IMAGE --push ezeev/earthly-rust-example:$tag
+  SAVE IMAGE --push $ns/earthly-rust-example:$tag
