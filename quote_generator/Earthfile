@@ -2,8 +2,23 @@ VERSION 0.7
 FROM alpine:3.17.2
 WORKDIR /quotes
 
+deps:
+  RUN apk add --no-cache jq curl
+
 artifact:
-  COPY in.txt ./quotes.txt
+  FROM +deps 
+  #  curl https://zenquotes.io/api/random | jq '.[0].q'
+  RUN curl -s https://api.quotable.io/random | jq -r '.content' >> quotes.txt
+  RUN sleep 3
+  RUN curl -s https://api.quotable.io/random | jq -r '.content' >> quotes.txt
+  RUN sleep 3
+  RUN curl -s https://api.quotable.io/random | jq -r '.content' >> quotes.txt
+  RUN sleep 3
+  RUN curl -s https://api.quotable.io/random | jq -r '.content' >> quotes.txt
+  RUN sleep 3
+  RUN curl -s https://api.quotable.io/random | jq -r '.content' >> quotes.txt
+
+  # COPY in.txt ./quotes.txt
   RUN echo Generated quotes:
   RUN cat quotes.txt
-  SAVE ARTIFACT quotes.txt
+  SAVE ARTIFACT quotes.txt AS LOCAL test.txt
