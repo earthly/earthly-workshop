@@ -19,5 +19,5 @@ artifact:
 
   # COPY in.txt ./quotes.txt
   RUN echo Generated quotes:
-  RUN cat quotes.txt
+  RUN --no-cache cat quotes.txt
   SAVE ARTIFACT quotes.txt
