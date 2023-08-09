@@ -18,6 +18,6 @@ artifact:
   RUN curl -s https://api.quotable.io/random | jq -r '.content' >> quotes.txt
 
   # COPY in.txt ./quotes.txt
-  RUN echo Generated quotes:
+  RUN --no-cache echo Generated quotes:
   RUN --no-cache cat quotes.txt
   SAVE ARTIFACT quotes.txt
