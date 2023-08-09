@@ -7,7 +7,6 @@ deps:
 
 artifact:
   FROM +deps 
-  #  curl https://zenquotes.io/api/random | jq '.[0].q'
   RUN curl -s https://api.quotable.io/random | jq -r '.content' >> quotes.txt
   RUN sleep 3
   RUN curl -s https://api.quotable.io/random | jq -r '.content' >> quotes.txt
